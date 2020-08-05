@@ -1,0 +1,9 @@
+$imgPath: '@/assets/images/coin';
+$logo: '#{$imgPath}/logo.svg';
+$login_bg: '#{$imgPath}/bg-login-graph.svg';
+
+// login
+@mixin logoSize() {
+  width: 213px;
+  height: 94px;
+}

@@ -1,0 +1,64 @@
+$primaryThemeColor: #45b0ce;
+$primaryButtonColor: #0094bd;
+$marketUnselectedTabColor: #000000;
+$primary-title-color: #79889a;
+$primary-token-color: #000000;
+$primary-text-color: #ffffff;
+$primaryRemarkColor: #00809d;
+$normal-token-color: #1f314a;
+$normal-placeholder-color: #c6cbd4;
+$normal-background-color: #eff1f5;
+$upColor: #01aa77;
+$downColor: #c91c1c;
+$flatColor: #79889a;
+$countdownColor: #7ee2ff;
+$chartBGColor: #181e30;
+$market-block-background-color: #ffffff;
+$secondary: #f8f8f8;
+$market-detail-background-color: #ffffff;
+$tradingAskBGColor: rgba(255, 102, 102, 0.2);
+$tradingBidBGColor: rgba(3, 203, 143, 0.2);
+$dark: #545556;
+$gray: #e5e5e6;
+$light-warning: #fffafa;
+$light-success: #f7feff;
+$trading-menu-background-color: #ffffff;
+$trading-button-background-color: #ffffff;
+$mbrStar1BGColor: #c91c1c;
+$mbrStar2BGColor: #0094bd;
+$mbrStar3BGColor: #ffc62c;
+
+@mixin primary-background-gradient($direction: 90deg) {
+  background-image: linear-gradient($direction, #45b0ce, #5ad6cf 50%, #a0e4cf);
+}
+@mixin theme-text-gradient() {
+  background-image: linear-gradient($primaryThemeColor);
+}
+@mixin kyc-status-card-avatar-gradient {
+  color: $primaryThemeColor;
+}
+@mixin member-class-star-gradient {
+  background-image: linear-gradient(114deg, #ffe434, #f5b300);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@mixin auth-title-primary-gradient {
+  color: $primaryThemeColor;
+}
+@mixin market-header-background {
+  background-image: linear-gradient(289deg, #7ee2ff, #45b0ce);
+}
+@mixin sidebar-status-nologin {
+  background-image: linear-gradient(276deg, #a0e4cf, #5ad6cf 50%, #45b0ce);
+}
+@mixin sidebar-status-inactive {
+  background-image: linear-gradient(275deg, #cdcdcd, #aa9b9b);
+}
+@mixin sidebar-status-active {
+  background-image: linear-gradient(277deg, #ffb686, #ff7e7b);
+}
+@mixin icon-gradient {
+  background-image: linear-gradient(120deg, #45b0ce, #a0e4cf);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
