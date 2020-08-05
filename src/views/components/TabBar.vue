@@ -67,7 +67,6 @@ export default {
     init() {
       this.isEntry = true
       this.tabs = this.entries.map((entry, id) => {
-        console.log(this.icons, id)
         return {
           icon: this.icons[id],
           text: this.texts[id],
@@ -76,6 +75,19 @@ export default {
           loading: false
         }
       })
+    },
+    handleClick(idx) {
+      const entryIndex = this.entries.indexOf(this.$route.name)
+      console.log(this.$route.name, entryIndex)
+      // if (entryIndex !== idx) {
+      //   this.tabs.map(_ => (_.active = false))
+      //   this.tabs[idx].loading = true
+      //   window.setTimeout(() => {
+      //     this.$router.push({
+      //       name: this.tabs[idx].path
+      //     })
+      //   }, 50)
+      // }
     }
   }
 }
