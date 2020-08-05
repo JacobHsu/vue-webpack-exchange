@@ -2,6 +2,10 @@
 
 `vue init webpack vue-webpack-exchange`
 
+## References
+
+[icomoon](https://icomoon.io/) TabBar Custom Icons
+
 ## Build Setup
 
 ``` bash

@@ -6,6 +6,7 @@ import router from './router'
 import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap-vue/dist/bootstrap-vue-icons.min.css'
 import '@/assets/bootstrap.css'
+import '@/assets/icomoon/style.css'
 import i18n from './i18n'
 
 Vue.config.productionTip = false

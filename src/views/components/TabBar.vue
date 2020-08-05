@@ -47,7 +47,7 @@ export default {
         ['icomoon-markets', 'icomoon-markets-active'],
         ['icomoon-trade', 'icomoon-trade-active'],
         ['icomoon-fund', 'icomoon-fund-active'],
-        ['icomoon-member', 'icomoon-member-active']
+        ['icomoon-account', 'icomoon-account-active']
       ],
       isEntry: false,
       tabs: []
@@ -58,7 +58,7 @@ export default {
       return [
         this.$t('tab_markets'),
         this.$t('tab_trade'),
-        this.$t('tab_fund'),
+        this.$t('tab_funds'),
         this.$t('tab_member')
       ]
     }
@@ -73,7 +73,7 @@ export default {
           text: this.texts[id],
           active: this.$route.name === this.entries[id],
           path: this.entries[id],
-          loading: true
+          loading: false
         }
       })
     }
