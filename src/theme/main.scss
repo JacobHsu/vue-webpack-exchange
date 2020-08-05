@@ -1,0 +1,38 @@
+$primary-text-color: #ffffff;
+
+// font size root
+$font-size015: .15rem;
+$font-size02: .2rem;
+$font-size05: .5rem;
+$font-size04: .4rem;
+$font-size06: .6rem;
+$font-size07: .7rem;
+$font-size08: .8rem;
+$font-size09: .9rem;
+$font-size1: 1rem;
+$font-size11: 1.1rem;
+$font-size12: 1.2rem;
+$font-size13: 1.3rem;
+$font-size14: 1.4rem;
+$font-size15: 1.5rem;
+$font-size16: 1.6rem;
+$font-size17: 1.7rem;
+$font-size18: 1.8rem;
+$font-size19: 1.9rem;
+$font-size20: 2rem;
+$font-size21: 2.1rem;
+$font-size22: 2.2rem;
+
+// grid-flex
+@mixin grid-flex(
+  $direction: row,
+  $justify: center,
+  $align: center,
+  $wrap: nowrap
+) {
+  display: flex;
+  flex-flow: $direction;
+  flex-wrap: $wrap;
+  justify-content: $justify;
+  align-items: $align;
+}

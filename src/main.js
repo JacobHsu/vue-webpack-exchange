@@ -3,13 +3,20 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import BootstrapVue from 'bootstrap-vue'
+import 'bootstrap-vue/dist/bootstrap-vue-icons.min.css'
+import '@/assets/bootstrap.css'
+import i18n from './i18n'
 
 Vue.config.productionTip = false
+
+Vue.use(BootstrapVue)
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
+  i18n,
   components: { App },
   template: '<App/>'
 })
