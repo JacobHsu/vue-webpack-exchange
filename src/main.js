@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import BootstrapVue from 'bootstrap-vue'
+import VeeValidate from 'vee-validate'
 import VueLocalStorage from 'vue-localstorage'
 import 'bootstrap-vue/dist/bootstrap-vue-icons.min.css'
 import '@/assets/bootstrap.css'
@@ -13,6 +14,7 @@ import i18n from './i18n'
 Vue.config.productionTip = false
 
 Vue.use(BootstrapVue)
+Vue.use(VeeValidate)
 Vue.use(VueLocalStorage)
 
 /* eslint-disable no-new */

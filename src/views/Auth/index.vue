@@ -1,13 +1,22 @@
 <template>
-  <router-view></router-view>
+  <router-view :countries="countries"></router-view>
 </template>
 
 <script>
+// import find from 'lodash/find'
 export default {
-  name: 'Auth'
+  name: 'Auth',
+  computed: {
+    countries() {
+      // const originData = this.$store.state.common.getSystemSettingData || []
+      // const countries = find(originData, { key: 'RegisterCountryList' })
+      //   ? find(originData, { key: 'RegisterCountryList' }).value
+      //   : []
+      const countries = []
+      return countries
+    }
+  }
 }
 </script>
 
-<style rel="stylesheet/scss" lang="scss">
-
-</style>
+<style rel="stylesheet/scss" lang="scss"></style>

@@ -1,10 +1,107 @@
 <template>
   <b-container fluid :class="[$style.login, 'w-100 h-100']" ref="user">
-    AuthLogin
+    <b-row>
+      <b-col
+        :class="[
+          $style.login__header,
+          'd-flex flex-column justify-content-center'
+        ]"
+      >
+        <b-btn
+          variant="link"
+          :to="{ name: 'Market' }"
+          :class="[$style.login__header__close, 'p-0 text-right']"
+        >
+          <i class="fas fa-times-circle"></i>
+        </b-btn>
+      </b-col>
+    </b-row>
+    <section class="mx-3">
+      <b-row>
+        <b-col>
+          <div :class="[$style.login__page__logo]"></div>
+        </b-col>
+      </b-row>
+      <b-row>
+        <b-col :class="[$style.login__page__title]">
+          <span v-text="$t('login_b_login')"></span>
+        </b-col>
+      </b-row>
+    </section>
+    <section class="mt-4">
+      <b-form v-on:submit.prevent="submit">
+        <b-form-group>
+          <b-row>
+            <b-col cols="5" md="3">
+              <label class="text-light" for="country-code">
+                <span
+                  v-text="$t('login_tf_countryCode_title')"
+                  @click="showRegionModal = true"
+                ></span>
+              </label>
+              <b-input-group
+                @click="showRegionModal = true"
+                :class="[
+                  $style.login__form__input__group,
+                  errors.has('country')
+                    ? $style['login__form__input__group--invalid']
+                    : ''
+                ]"
+              >
+                <b-input-group-prepend>
+                  <label for="verifiy" class="input-group-text">
+                    <i class="icomoon-phone"></i>
+                  </label>
+                </b-input-group-prepend>
+                <b-btn class="border-0 px-0 text-left">
+                  <span class="ml-2" v-text="countryCodeText"></span>
+                </b-btn>
+                <input
+                  type="hidden"
+                  v-model="form.country"
+                  v-validate="{ required: true }"
+                  name="country"
+                  id="country"
+                />
+              </b-input-group>
+            </b-col>
+            <b-col cols="7" md="9">
+              <label class="text-light" for="phone-number">
+                <span v-text="$t('login_tf_number_title')"></span>
+              </label>
+              <b-input-group
+                :class="[
+                  $style.login__form__input__group,
+                  errors.has('phone-number')
+                    ? $style['login__form__input__group--invalid']
+                    : ''
+                ]"
+              >
+                <input
+                  type="text"
+                  v-model="form.phone_number"
+                  :class="[
+                    $style['login__form__background-0'],
+                    'form-control border-0'
+                  ]"
+                  v-validate="{ required: true, numeric: true }"
+                  id="phone-number"
+                  name="phone-number"
+                  @focus="scroll"
+                  @keydown="filterNumber"
+                  :placeholder="$t('register_tf_number_placeholder')"
+                />
+              </b-input-group>
+            </b-col>
+          </b-row>
+        </b-form-group>
+      </b-form>
+    </section>
   </b-container>
 </template>
 
 <script>
+import { getLoginInfo } from '@/libs/ls'
 export default {
   name: 'AuthLogin',
   props: {
@@ -16,7 +113,20 @@ export default {
       default: false
     }
   },
-  created() {},
+  created() {
+    this.form.country = this.countries
+      ? this.countries.find(
+        _ => _.countryID === (getLoginInfo().preferCountryID || '')
+      ) || null
+      : null
+    console.log('created', this.countries)
+    // if (getAccessToken()) {
+    //   logoutDisposal()
+    //   if (this.sessionTimeout) {
+    //     window.alert(this.$t('setting_e_autologout_30'))
+    //   }
+    // }
+  },
   data() {
     return {
       form: {
@@ -30,7 +140,13 @@ export default {
     }
   },
   methods: {},
-  computed: {}
+  computed: {
+    countryCodeText() {
+      return this.form.country === null
+        ? this.$t('login_tf_countryCode_placeholder')
+        : `+${this.form.country.countryCode}`
+    }
+  }
 }
 </script>
 
