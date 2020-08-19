@@ -1,0 +1,430 @@
+[
+    {
+      "key": "RegisterCountryList",
+      "value": [
+        {
+          "flag": 3,
+          "countryID": "CN",
+          "countryCode": "86",
+          "countryName": "CN China",
+          "currencyID": "CNY",
+          "timeZone": 8,
+          "status": "Active"
+        },
+        {
+          "flag": 3,
+          "countryID": "MY",
+          "countryCode": "60",
+          "countryName": "MY Malaysia",
+          "currencyID": "MYR",
+          "timeZone": 8,
+          "status": "Active"
+        },
+        {
+          "flag": 3,
+          "countryID": "TW",
+          "countryCode": "886",
+          "countryName": "TW Taiwan",
+          "currencyID": "TWD",
+          "timeZone": 8,
+          "status": "Active"
+        },
+        {
+          "flag": 3,
+          "countryID": "SG",
+          "countryCode": "65",
+          "countryName": "SG Singapore",
+          "currencyID": "SGD",
+          "timeZone": 8,
+          "status": "Active"
+        },
+        {
+          "flag": 3,
+          "countryID": "VN",
+          "countryCode": "84",
+          "countryName": "VN Vietnam",
+          "currencyID": "VND",
+          "timeZone": 7,
+          "status": "Active"
+        },
+        {
+          "flag": 3,
+          "countryID": "HK",
+          "countryCode": "852",
+          "countryName": "HK Hong Kong",
+          "currencyID": "HKD",
+          "timeZone": 8,
+          "status": "Active"
+        },
+        {
+          "flag": 3,
+          "countryID": "US",
+          "countryCode": "1",
+          "countryName": "US United States",
+          "currencyID": "USD",
+          "timeZone": -5,
+          "status": "Active"
+        },
+        {
+          "flag": 1,
+          "countryID": "AT",
+          "countryCode": "43",
+          "countryName": "AT Austria",
+          "currencyID": "EUR",
+          "timeZone": 1,
+          "status": "Active"
+        },
+        {
+          "flag": 1,
+          "countryID": "AU",
+          "countryCode": "61",
+          "countryName": "AU Australia",
+          "currencyID": "AUO",
+          "timeZone": 10,
+          "status": "Active"
+        },
+        {
+          "flag": 1,
+          "countryID": "BD",
+          "countryCode": "880",
+          "countryName": "BD Bengal",
+          "currencyID": "BDT",
+          "timeZone": 6,
+          "status": "Active"
+        },
+        {
+          "flag": 1,
+          "countryID": "BE",
+          "countryCode": "32",
+          "countryName": "BE Belgium",
+          "currencyID": "EUR",
+          "timeZone": 1,
+          "status": "Active"
+        },
+        {
+          "flag": 1,
+          "countryID": "BN",
+          "countryCode": "673",
+          "countryName": "BN Brunei",
+          "currencyID": "BND",
+          "timeZone": 8,
+          "status": "Active"
+        },
+        {
+          "flag": 1,
+          "countryID": "CA",
+          "countryCode": "1",
+          "countryName": "CA Canada",
+          "currencyID": "CAD",
+          "timeZone": -5,
+          "status": "Active"
+        },
+        {
+          "flag": 1,
+          "countryID": "CH",
+          "countryCode": "41",
+          "countryName": "CH Switzerland",
+          "currencyID": "SFR",
+          "timeZone": 1,
+          "status": "Active"
+        },
+        {
+          "flag": 1,
+          "countryID": "DE",
+          "countryCode": "49",
+          "countryName": "DE Germany",
+          "currencyID": "EUR",
+          "timeZone": 1,
+          "status": "Active"
+        },
+        {
+          "flag": 1,
+          "countryID": "DK",
+          "countryCode": "45",
+          "countryName": "DK Denmark",
+          "currencyID": "DKK",
+          "timeZone": 1,
+          "status": "Active"
+        },
+        {
+          "flag": 1,
+          "countryID": "EG",
+          "countryCode": "20",
+          "countryName": "EG Egypt",
+          "currencyID": "EGP",
+          "timeZone": 2,
+          "status": "Active"
+        },
+        {
+          "flag": 1,
+          "countryID": "ES",
+          "countryCode": "34",
+          "countryName": "ES Spain",
+          "currencyID": "EUR",
+          "timeZone": 1,
+          "status": "Active"
+        },
+        {
+          "flag": 1,
+          "countryID": "FI",
+          "countryCode": "358",
+          "countryName": "FI Finland",
+          "currencyID": "EUR",
+          "timeZone": 2,
+          "status": "Active"
+        },
+        {
+          "flag": 1,
+          "countryID": "FR",
+          "countryCode": "33",
+          "countryName": "FR France",
+          "currencyID": "EUR",
+          "timeZone": 1,
+          "status": "Active"
+        },
+        {
+          "flag": 1,
+          "countryID": "GB",
+          "countryCode": "44",
+          "countryName": "GB United Kingdom",
+          "currencyID": "GBP",
+          "timeZone": 0,
+          "status": "Active"
+        },
+        {
+          "flag": 1,
+          "countryID": "GR",
+          "countryCode": "30",
+          "countryName": "GR Greece",
+          "currencyID": "EUR",
+          "timeZone": 2,
+          "status": "Active"
+        },
+        {
+          "flag": 1,
+          "countryID": "ID",
+          "countryCode": "62",
+          "countryName": "ID Indonesia",
+          "currencyID": "IDR",
+          "timeZone": 7,
+          "status": "Active"
+        },
+        {
+          "flag": 1,
+          "countryID": "IE",
+          "countryCode": "353",
+          "countryName": "IE Ireland",
+          "currencyID": "EUR",
+          "timeZone": 0,
+          "status": "Active"
+        },
+        {
+          "flag": 1,
+          "countryID": "IL",
+          "countryCode": "972",
+          "countryName": "IL Israel",
+          "currencyID": "ILS",
+          "timeZone": 2,
+          "status": "Active"
+        },
+        {
+          "flag": 1,
+          "countryID": "IN",
+          "countryCode": "91",
+          "countryName": "IN India",
+          "currencyID": "INR",
+          "timeZone": 5,
+          "status": "Active"
+        },
+        {
+          "flag": 1,
+          "countryID": "IS",
+          "countryCode": "354",
+          "countryName": "IS Iceland",
+          "currencyID": "ISK",
+          "timeZone": 0,
+          "status": "Active"
+        },
+        {
+          "flag": 1,
+          "countryID": "IT",
+          "countryCode": "39",
+          "countryName": "IT Italy",
+          "currencyID": "EUR",
+          "timeZone": 1,
+          "status": "Active"
+        },
+        {
+          "flag": 3,
+          "countryID": "JP",
+          "countryCode": "81",
+          "countryName": "JP Japan",
+          "currencyID": "JPY",
+          "timeZone": 9,
+          "status": "Active"
+        },
+        {
+          "flag": 1,
+          "countryID": "KH",
+          "countryCode": "855",
+          "countryName": "KH Cambodia",
+          "currencyID": "KHR",
+          "timeZone": 7,
+          "status": "Active"
+        },
+        {
+          "flag": 3,
+          "countryID": "KR",
+          "countryCode": "82",
+          "countryName": "KR South Korea",
+          "currencyID": "KRW",
+          "timeZone": 9,
+          "status": "Active"
+        },
+        {
+          "flag": 1,
+          "countryID": "LA",
+          "countryCode": "856",
+          "countryName": "LA Laos",
+          "currencyID": "LAK",
+          "timeZone": 7,
+          "status": "Active"
+        },
+        {
+          "flag": 1,
+          "countryID": "LU",
+          "countryCode": "352",
+          "countryName": "LU Luxembourg",
+          "currencyID": "EUR",
+          "timeZone": 1,
+          "status": "Active"
+        },
+        {
+          "flag": 1,
+          "countryID": "MA",
+          "countryCode": "377",
+          "countryName": "MA Monaco",
+          "currencyID": "MAD",
+          "timeZone": 0,
+          "status": "Active"
+        },
+        {
+          "flag": 1,
+          "countryID": "MM",
+          "countryCode": "95",
+          "countryName": "MM Myanmar",
+          "currencyID": "BUK",
+          "timeZone": 6,
+          "status": "Active"
+        },
+        {
+          "flag": 1,
+          "countryID": "MO",
+          "countryCode": "853",
+          "countryName": "MO Macau",
+          "currencyID": "MOP",
+          "timeZone": 8,
+          "status": "Active"
+        },
+        {
+          "flag": 1,
+          "countryID": "NL",
+          "countryCode": "31",
+          "countryName": "NL Netherlands",
+          "currencyID": "EUR",
+          "timeZone": 1,
+          "status": "Active"
+        },
+        {
+          "flag": 1,
+          "countryID": "NO",
+          "countryCode": "47",
+          "countryName": "NO Norway",
+          "currencyID": "NOK",
+          "timeZone": 1,
+          "status": "Active"
+        },
+        {
+          "flag": 1,
+          "countryID": "NZ",
+          "countryCode": "64",
+          "countryName": "NZ New Zealand",
+          "currencyID": "NZD",
+          "timeZone": 12,
+          "status": "Active"
+        },
+        {
+          "flag": 1,
+          "countryID": "PG",
+          "countryCode": "675",
+          "countryName": "PG Papua New Guinea",
+          "currencyID": "PGK",
+          "timeZone": 10,
+          "status": "Active"
+        },
+        {
+          "flag": 1,
+          "countryID": "PH",
+          "countryCode": "63",
+          "countryName": "PH Philippines",
+          "currencyID": "PHP",
+          "timeZone": 8,
+          "status": "Active"
+        },
+        {
+          "flag": 1,
+          "countryID": "PL",
+          "countryCode": "48",
+          "countryName": "PL Poland",
+          "currencyID": "EUR",
+          "timeZone": 1,
+          "status": "Active"
+        },
+        {
+          "flag": 1,
+          "countryID": "RU",
+          "countryCode": "7",
+          "countryName": "RU Russia",
+          "currencyID": "RUB",
+          "timeZone": 3,
+          "status": "Active"
+        },
+        {
+          "flag": 1,
+          "countryID": "SA",
+          "countryCode": "966",
+          "countryName": "SA Saudi Arabia",
+          "currencyID": "SAR",
+          "timeZone": 3,
+          "status": "Active"
+        },
+        {
+          "flag": 1,
+          "countryID": "TH",
+          "countryCode": "66",
+          "countryName": "TH Thailand",
+          "currencyID": "THP",
+          "timeZone": 7,
+          "status": "Active"
+        },
+        {
+          "flag": 1,
+          "countryID": "TR",
+          "countryCode": "90",
+          "countryName": "TR Turkey",
+          "currencyID": "TRY",
+          "timeZone": 2,
+          "status": "Active"
+        },
+        {
+          "flag": 1,
+          "countryID": "ZA",
+          "countryCode": "27",
+          "countryName": "ZA South Africa",
+          "currencyID": "ZAR",
+          "timeZone": 2,
+          "status": "Active"
+        }
+      ]
+    }
+  ]

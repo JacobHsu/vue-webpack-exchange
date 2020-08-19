@@ -139,7 +139,26 @@ export default {
       showRegionModal: false
     }
   },
-  methods: {},
+  methods: {
+    scroll() {
+      setTimeout(() => this.$refs.user.scrollTo(0, 160), 200)
+    },
+    filterNumber(e) {
+      let key = e.keyCode || e.which
+      if (key === 8 || key === 9) return
+      if (
+        !(
+          (key >= 48 && key <= 57) ||
+          (key >= 96 && key <= 105) ||
+          key === 37 ||
+          key === 39
+        )
+      ) {
+        e.returnValue = false
+        if (e.preventDefault) e.preventDefault()
+      }
+    }
+  },
   computed: {
     countryCodeText() {
       return this.form.country === null

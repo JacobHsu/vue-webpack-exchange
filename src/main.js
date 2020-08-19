@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import store from './store'
 import BootstrapVue from 'bootstrap-vue'
 import VeeValidate from 'vee-validate'
 import VueLocalStorage from 'vue-localstorage'
@@ -21,6 +22,7 @@ Vue.use(VueLocalStorage)
 new Vue({
   el: '#app',
   router,
+  store,
   i18n,
   components: { App },
   template: '<App/>'

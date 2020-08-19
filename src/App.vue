@@ -13,7 +13,10 @@
 import TabBar from '@/views/components/TabBar'
 export default {
   name: 'App',
-  components: { TabBar }
+  components: { TabBar },
+  mounted() {
+    this.$store.dispatch('getSystemSetting')
+  }
 }
 </script>
 
