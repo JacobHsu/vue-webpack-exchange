@@ -101,7 +101,7 @@
 </template>
 
 <script>
-import { getLoginInfo } from '@/libs/ls'
+
 export default {
   name: 'AuthLogin',
   props: {
@@ -114,12 +114,11 @@ export default {
     }
   },
   created() {
+
     this.form.country = this.countries
-      ? this.countries.find(
-        _ => _.countryID === (getLoginInfo().preferCountryID || '')
-      ) || null
+      ? this.countries.find(_ => _.countryID === 'TW') || 'TW'
       : null
-    console.log('created', this.countries)
+    // console.log('1created', this.countries.find(_ => _.countryID === 'TW'), this.form.country)
     // if (getAccessToken()) {
     //   logoutDisposal()
     //   if (this.sessionTimeout) {
@@ -161,6 +160,7 @@ export default {
   },
   computed: {
     countryCodeText() {
+      console.log(this.form.country)
       return this.form.country === null
         ? this.$t('login_tf_countryCode_placeholder')
         : `+${this.form.country.countryCode}`
