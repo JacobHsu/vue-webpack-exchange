@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import Auth from '@/views/Auth'
 import AuthLogin from '@/views/Auth/AuthLogin'
+import AuthRegister from '@/views/Auth/AuthRegister'
 import Wallet from '@/views/Wallet'
 
 Vue.use(Router)
@@ -35,6 +36,11 @@ export default new Router({
           name: 'AuthLogin',
           component: AuthLogin,
           props: true
+        },
+        {
+          path: 'register',
+          name: 'AuthRegister',
+          component: AuthRegister
         }
       ]
     }

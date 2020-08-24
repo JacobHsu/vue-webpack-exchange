@@ -11,8 +11,10 @@ import 'bootstrap-vue/dist/bootstrap-vue-icons.min.css'
 import '@/assets/bootstrap.css'
 import '@/assets/icomoon/style.css'
 import i18n from './i18n'
+import conf from './conf'
 
 Vue.config.productionTip = false
+Vue.prototype.$conf = conf
 
 Vue.use(BootstrapVue)
 Vue.use(VeeValidate)

@@ -95,13 +95,30 @@
             </b-col>
           </b-row>
         </b-form-group>
+        <b-btn
+          :disabled="errors.any() || !isCompleted || form.loading"
+          type="submit"
+          :class="[$style.login__button, $style.login__login]"
+          :block="true"
+          size="md"
+          variant="link"
+        >
+          <i v-if="form.loading" class="fas fa-spinner fa-pulse"></i>
+          <span v-text="$t('login_b_login')"></span>
+        </b-btn>
+        <b-btn
+          to="register"
+          variant="info"
+          :class="['btn-block']"
+        >
+          <span v-text="$t('login_b_register')"></span>
+        </b-btn>
       </b-form>
     </section>
   </b-container>
 </template>
 
 <script>
-
 export default {
   name: 'AuthLogin',
   props: {
@@ -114,7 +131,6 @@ export default {
     }
   },
   created() {
-
     this.form.country = this.countries
       ? this.countries.find(_ => _.countryID === 'TW') || 'TW'
       : null

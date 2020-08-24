@@ -99,3 +99,15 @@ exports.createNotifierCallback = () => {
     })
   }
 }
+
+exports.assignAppName = function (env) {
+  let newEnv = {}
+  Object.entries(env).forEach(([key, value]) => {
+    newEnv = Object.assign({}, newEnv, {
+      [key]: Object.assign({}, value, {
+        'APP_NAME': key.includes('-') ? JSON.stringify(key.split('-')[0]) : '""',
+      })
+    })
+  })
+  return newEnv
+}
