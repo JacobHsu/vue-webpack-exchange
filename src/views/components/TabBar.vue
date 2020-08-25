@@ -78,16 +78,16 @@ export default {
     },
     handleClick(idx) {
       const entryIndex = this.entries.indexOf(this.$route.name)
-      console.log(this.$route.name, entryIndex)
-      // if (entryIndex !== idx) {
-      //   this.tabs.map(_ => (_.active = false))
-      //   this.tabs[idx].loading = true
-      //   window.setTimeout(() => {
-      //     this.$router.push({
-      //       name: this.tabs[idx].path
-      //     })
-      //   }, 50)
-      // }
+      console.log(this.$route.name, entryIndex, idx, this.tabs)
+      if (entryIndex !== idx) {
+        this.tabs.map(_ => (_.active = false))
+        this.tabs[idx].loading = true
+        window.setTimeout(() => {
+          this.$router.push({
+            name: this.tabs[idx].path
+          })
+        }, 50)
+      }
     }
   }
 }

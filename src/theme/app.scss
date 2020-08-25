@@ -2,8 +2,14 @@ $imgPath: '@/assets/images/coin';
 $logo: '#{$imgPath}/logo.svg';
 $login_bg: '#{$imgPath}/bg-login-graph.svg';
 
+$imgPath: '@/assets/images/app';
+
 // login
 @mixin logoSize() {
   width: 213px;
   height: 94px;
 }
+
+// account
+$account_cover: '#{$imgPath}/bg-me-welcome.svg';
+$account_bg: '#{$imgPath}/bg-member.svg';

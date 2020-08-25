@@ -5,6 +5,8 @@ import Auth from '@/views/Auth'
 import AuthLogin from '@/views/Auth/AuthLogin'
 import AuthRegister from '@/views/Auth/AuthRegister'
 import Wallet from '@/views/Wallet'
+import Member from '@/views/Member'
+import MemberMain from '@/views/Member/MemberMain'
 
 Vue.use(Router)
 
@@ -41,6 +43,20 @@ export default new Router({
           path: 'register',
           name: 'AuthRegister',
           component: AuthRegister
+        }
+      ]
+    },
+    {
+      path: '/member',
+      name: 'Member',
+      component: Member,
+      props: true,
+      redirect: { name: 'MemberMain' },
+      children: [
+        {
+          path: 'main',
+          name: 'MemberMain',
+          component: MemberMain
         }
       ]
     }
