@@ -12,7 +12,6 @@ export default {
       const countries = find(originData, { key: 'RegisterCountryList' })
         ? find(originData, { key: 'RegisterCountryList' }).value
         : []
-      console.log(countries)
       return countries
     }
   }

@@ -19,7 +19,131 @@
       </b-row>
     </section>
     <section class="mt-3">
+      <b-form @submit.prevent="validateBeforeSubmit">
+        <b-form-group>
+          <b-row>
+            <b-col cols="5" md="3">
+              <b-input-group
+                @click="showRegionModal = true"
+                :class="[
+                  $style.user__form__input__group,
+                  errors.has('country') || form.phone.status === false
+                    ? $style['user__form__input__group--invalid']
+                    : ''
+                ]"
+              >
+                <b-input-group-prepend>
+                  <label for="verifiy" class="input-group-text">
+                    <i class="icomoon-phone"></i>
+                  </label>
+                </b-input-group-prepend>
+                <div class="form-control border-0 px-0 text-left">
+                  <span class="ml-2" v-text="countryCodeText"></span>
+                </div>
+                <input
+                  type="hidden"
+                  v-model="form.country"
+                  v-validate="{ required: true }"
+                  name="country"
+                  id="country"
+                />
+              </b-input-group>
+            </b-col>
+            <b-col cols="7" md="9">
+              <b-input-group
+                :class="[
+                  $style.user__form__input__group,
+                  errors.has('phone-number') || form.phone.status === false
+                    ? $style['user__form__input__group--invalid']
+                    : ''
+                ]"
+              >
+                <input
+                  type="text"
+                  v-model="form.phone.number"
+                  :class="[
+                    $style['user__form__background-0'],
+                    'form-control border-0'
+                  ]"
+                  v-validate="{ required: true, numeric: true }"
+                  id="phone-number"
+                  name="phone-number"
+                  @keydown="filterNumber"
+                  :placeholder="$t('login_tf_number_placeholder')"
+                />
+              </b-input-group>
+              <small v-text="form.phone.message" class="text-danger"></small>
+            </b-col>
+          </b-row>
+        </b-form-group>
+        <b-form-group>
+          <b-row>
+            <b-col>
+              <b-input-group
+                :class="[
+                  $style.user__form__input__group,
+                  errors.has('verify')
+                    ? $style['user__form__input__group--invalid']
+                    : ''
+                ]"
+              >
+                <b-input-group-prepend>
+                  <label for="verifiy" class="input-group-text">
+                    <i class="icomoon-shield"></i>
+                  </label>
+                </b-input-group-prepend>
+                <input
+                  type="text"
+                  v-model="form.verify"
+                  :class="[
+                    $style['user__form__background-0'],
+                    'form-control border-0'
+                  ]"
+                  v-validate="{ required: true }"
+                  id="verifiy"
+                  name="verify"
+                  :placeholder="$t('register_tf_code_placeholder')"
+                />
+                <b-input-group-append class="border-0">
+                  <b-btn
+                    :disabled="
+                      form.processingVerification ||
+                        !form.phone.number ||
+                        !form.country
+                    "
+                    v-if="smsRemainingTime === 0"
+                    :class="[
+                      $style.user__form__input__group__verify,
+                      'border-0'
+                    ]"
+                    @click="processNumberValidate"
+                  >
+                    <i
+                      v-if="form.processingVerification"
+                      class="fas fa-spinner fa-pulse"
+                    ></i>
+                    <span
+                      v-if="!form.processingVerification"
+                      v-text="$t('g_b_countdown_get')"
+                    ></span>
+                  </b-btn>
 
+                </b-input-group-append>
+              </b-input-group>
+            </b-col>
+          </b-row>
+        </b-form-group>
+
+        <b-btn :disabled="errors.any() || !isCompleted || form.loading"
+               type="submit"
+               :block="true"
+               size="md"
+               :class="[$style.user__form__submit, 'border-0']">
+          <i v-if="form.loading"
+             class="fas fa-spinner fa-pulse"></i>
+          <span v-text="$t('login_b_register')"></span>
+        </b-btn>
+      </b-form>
       <b-row>
         <b-col :class="[$style.user__link]">
           <span v-text="$t('register_b_agreement_part1')"></span>
@@ -36,17 +160,65 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
   name: 'AuthRegister',
-  props: {},
-  data() {
-    return {}
+  props: {
+    countries: {
+      type: Array
+    }
   },
-  computed: {},
-  created() {},
+  data() {
+    return {
+      showRegionModal: false,
+      form: {
+        processingVerification: false,
+        loading: false,
+        country: null,
+        phone: {
+          number: null,
+          status: null,
+          message: null
+        },
+        verify: null,
+        nickname: {
+          text: null,
+          status: null,
+          message: null
+        },
+        password: null,
+        confirm_password: null,
+        geeCaptcha: null
+      }
+    }
+  },
+  computed: {
+    countryCodeText() {
+      return this.form.country === null
+        ? this.$t('login_tf_countryCode_placeholder')
+        : `+${this.form.country.countryCode}`
+    },
+    ...mapGetters(['smsRemainingTime'])
+  },
+  created() {
+    this.form.country = this.countries
+      ? this.countries.find(_ => _.countryID === 'TW') || null
+      : null
+  },
   mounted() {},
   watch: {},
-  methods: {},
+  methods: {
+    processNumberValidate() {
+      this.form.processingVerification = true
+      // verifyPhoneNumber()
+      this.getSmsCode()
+    },
+    getSmsCode() {
+      alert(1234)
+      // this.dispatch('resetSmsCountdownTimer')
+      // this.dispatch('setSmsCountdownTimer')
+    }
+  },
   components: {}
 }
 </script>

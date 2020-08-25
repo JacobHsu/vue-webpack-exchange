@@ -176,7 +176,6 @@ export default {
   },
   computed: {
     countryCodeText() {
-      console.log(this.form.country)
       return this.form.country === null
         ? this.$t('login_tf_countryCode_placeholder')
         : `+${this.form.country.countryCode}`
